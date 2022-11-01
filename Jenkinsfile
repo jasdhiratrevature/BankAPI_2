@@ -10,8 +10,8 @@ pipeline {
     }
         stage('Build') {
       steps {
-        sh 'chmod a+x mvn'
-        sh './mvn clean package -DskipTests=true'
+        bat 'chmod a+x mvn'
+        bat './mvn clean package -DskipTests=true'
       }
 
           post {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('DockerBuild') {
       steps {
-        sh 'docker build -t jasdhiratrevature/BankAPI:latest .'
+        bat 'docker build -t jasdhiratrevature/BankAPI:latest .'
       }
         }
 
