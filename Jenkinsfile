@@ -22,7 +22,7 @@ pipeline {
         }
         stage('DockerBuild') {
       steps {
-        bat 'docker build -t jasdhiratrevature/BankAPI:latest .'
+        bat 'docker build -t jasdhiratrevature/bank-api:latest .'
       }
         }
 
