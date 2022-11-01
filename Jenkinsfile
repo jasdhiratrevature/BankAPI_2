@@ -10,8 +10,8 @@ pipeline {
     }
         stage('Build') {
       steps {
-        bat 'chmod a+x mvn'
-        bat './mvn clean package -DskipTests=true'
+       // bat 'chmod a+x mvn'
+        bat 'mvn clean package -DskipTests=true'
       }
 
           post {
